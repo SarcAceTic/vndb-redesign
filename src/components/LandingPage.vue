@@ -19,17 +19,67 @@ console.log(somevn)
 
 <template>
  <main>
+  <LandingHeader />
   <div class="landing-image h-screen">
    <v-container class="fill-height">
-    <LandingHeader />
-    <v-row class="unlayered">
-     <v-col cols="12"><h1 class="">Visual Novel Database</h1></v-col>
-     <v-col cols="12"><p class="">Get the most accurate, up-to-date Visual Novels</p></v-col>
-    </v-row>
-    <v-row>
-     <v-col cols="12"
-      ><p>{{ somevn.data.vn }}</p></v-col
+    <v-row class="unlayered align-center" no-gutters>
+     <v-col cols="6"
+      ><v-col
+       ><v-col cols=""><h1 class="">Visual Novel Database</h1></v-col>
+       <v-col cols=""
+        ><p class="">
+         VNDB.org strives to be a comprehensive database for information about visual novels.
+         website is built as a wiki, meaning that anyone can freely add and contribute information
+         to the database, allowing us to create the largest, most accurate and most up-to-date
+         visual novel database on the web.
+        </p></v-col
+       >
+       <v-col><v-btn color="blue-darken-1" elevation="10">See Visual Novels</v-btn></v-col></v-col
+      ></v-col
      >
+
+     <v-col cols="6"
+      ><v-col cols="12" class="text-center vn-data"
+       ><h3>
+        <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.vn.toLocaleString() }}
+       </h3>
+       <h5>Visual Novels</h5></v-col
+      ></v-col
+     >
+     <v-col cols="12" class="mt-8"
+      ><v-row class="other-data"
+       ><v-col cols="" class="text-center"
+        ><h3>
+         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.chars.toLocaleString() }}
+        </h3>
+        <h5>Characters</h5></v-col
+       >
+       <v-col cols="" class="text-center"
+        ><h3>
+         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.vn.toLocaleString() }}
+        </h3>
+        <h5>Producers</h5></v-col
+       >
+       <v-col cols="" class="text-center"
+        ><h3>
+         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.releases.toLocaleString() }}
+        </h3>
+        <h5>Releases</h5></v-col
+       >
+       <v-col cols="" class="text-center"
+        ><h3>
+         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.tags.toLocaleString() }}
+        </h3>
+        <h5>Tags</h5></v-col
+       >
+       <v-col cols="" class="text-center"
+        ><h3>
+         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.traits.toLocaleString() }}
+        </h3>
+        <h5>Traits</h5></v-col
+       >
+      </v-row>
+     </v-col>
     </v-row>
    </v-container>
   </div>
@@ -49,10 +99,16 @@ console.log(somevn)
  right: 0;
  bottom: 0;
  left: 0;
- background: rgba(0, 0, 0, 0.5);
+ background: rgba(0, 0, 0, 0.6);
 }
 .unlayered {
-  position: relative;
-  z-index: 0;
+ position: relative;
+ z-index: 0;
+}
+.vn-data {
+ font-size: 40px;
+}
+.other-data {
+  font-size: 25px;
 }
 </style>
