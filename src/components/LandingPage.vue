@@ -34,10 +34,15 @@ console.log(somevn)
          visual novel database on the web.
         </p></v-col
        >
-       <v-col><v-btn color="blue-darken-1" elevation="10">See Visual Novels</v-btn></v-col></v-col
+       <v-col
+        ><v-btn class="mr-5" color="blue-darken-1" elevation="10"
+         >See Visual Novels<template v-slot:append
+          ><v-icon>mdi-arrow-right</v-icon></template
+         ></v-btn
+        ><v-btn variant="outlined">Sign Up</v-btn></v-col
+       ></v-col
       ></v-col
      >
-
      <v-col cols="6"
       ><v-col cols="12" class="text-center vn-data"
        ><h3>
@@ -46,7 +51,7 @@ console.log(somevn)
        <h5>Visual Novels</h5></v-col
       ></v-col
      >
-     <v-col cols="12" class="mt-8"
+     <v-col cols="12" class="mt-10"
       ><v-row class="other-data"
        ><v-col cols="" class="text-center"
         ><h3>
@@ -109,6 +114,6 @@ console.log(somevn)
  font-size: 40px;
 }
 .other-data {
-  font-size: 25px;
+ font-size: 25px;
 }
 </style>
