@@ -56,7 +56,7 @@ console.log(somevn)
        >
        <v-col cols="" class="text-center"
         ><h3>
-         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.vn.toLocaleString() }}
+         <v-icon color="green">mdi-circle-small</v-icon>{{ somevn.data.producers.toLocaleString() }}
         </h3>
         <h5>Producers</h5></v-col
        >
