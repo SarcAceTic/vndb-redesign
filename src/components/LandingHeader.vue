@@ -12,14 +12,15 @@ const profileMenu = [
  <header>
   <v-app class="bg-transparent">
    <v-app-bar class="bg-transparent" elevation="1">
-    <v-app-bar-title class="ml-10"
-     ><span>VNDB.org</span>
-     <v-btn class="ml-5"
+    <v-col
+     ><v-app-bar-title class="ml-10"><span>VNDB.org</span></v-app-bar-title>
+    </v-col>
+    <v-col>
+     <v-btn class="ml-5 text-none w-50 justify-start border"
       ><template v-slot:prepend><v-icon size="25">mdi-magnify</v-icon></template
       >Search</v-btn
-     ></v-app-bar-title
+     ></v-col
     >
-
     <template v-slot:append>
      <v-row class="align-center mr-5">
       <v-col
@@ -56,6 +57,4 @@ const profileMenu = [
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
 </style>
