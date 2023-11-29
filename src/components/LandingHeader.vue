@@ -10,7 +10,7 @@ const profileMenu = [
 
 <template>
  <header>
-  <v-app class="bg-transparent">
+  <v-app class="bg-transparent h-0">
    <v-app-bar class="bg-transparent" elevation="1">
     <v-col
      ><v-app-bar-title class="ml-10"><span>VNDB.org</span></v-app-bar-title>
